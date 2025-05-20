@@ -33,7 +33,7 @@ Building upon the spirit of the [GeoMagnet project](https://github.com/aligundog
 TerraSTL is a Nuxt.js application leveraging its full-stack capabilities:
 
 1.  **Frontend (Vue.js / Nuxt):** Displays the interactive map (likely using a library like Leaflet or Mapbox with OpenStreetMap data) and provides the interface for the user to select a geographical bounding box. It also uses **Three.js** to potentially visualize the generated terrain mesh in the browser before export.
-2.  **Backend (Nuxt Server Routes):** Acts as an intermediary. Browser-based requests to external APIs like [OpenTopoData](https://www.opentopodata.com/) can sometimes be problematic due to CORS or rate limits when coming directly from a client. The Nuxt backend makes the necessary API calls to fetch elevation data for the selected region.
+2.  **Backend (Nuxt Server Routes):** Acts as an intermediary. Browser-based requests to external APIs like [OpenTopoData](https://www.opentopodata.org/) can sometimes be problematic due to CORS or rate limits when coming directly from a client. The Nuxt backend makes the necessary API calls to fetch elevation data for the selected region.
 3.  **Data Processing & STL Generation:** The backend receives the elevation data. This data (essentially a grid of height values) is then processed to construct a 3D mesh. This mesh is finally formatted and exported as an STL file, which is then sent back to the frontend for download.
 
 The use of Nuxt's server routes was essential to reliably fetch data from APIs like OpenTopoData which power the elevation lookups.
@@ -125,7 +125,7 @@ Contributions are welcome! Whether you want to report a bug, suggest a feature, 
 4. Open a Pull Request.
 
 🙏 Acknowledgements
-- OpenTopoData (www.opentopodata.com) for providing the essential elevation data API.
+- OpenTopoData (www.opentopodata.org) for providing the essential elevation data API.
 - OpenStreetMap (www.openstreetmap.org) for the underlying map data (© OpenStreetMap contributors).
 - Three.js (threejs.org) for the powerful 3D rendering capabilities.
 - The Nuxt.js community for the fantastic framework.
